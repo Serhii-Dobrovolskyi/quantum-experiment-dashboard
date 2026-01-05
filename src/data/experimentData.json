@@ -1,0 +1,26 @@
+{
+  "runs": [
+    {
+      "runId": "RUN-001",
+      "timestamp": "2026-01-01T10:15:00Z",
+      "qubits": [
+        { "id": "Q1", "fidelity": 0.991, "error": 0.008, "stability": 0.93 },
+        { "id": "Q2", "fidelity": 0.987, "error": 0.011, "stability": 0.89 },
+        { "id": "Q3", "fidelity": 0.993, "error": 0.007, "stability": 0.95 },
+        { "id": "Q4", "fidelity": 0.984, "error": 0.014, "stability": 0.86 },
+        { "id": "Q5", "fidelity": 0.989, "error": 0.010, "stability": 0.91 }
+      ]
+    },
+    {
+      "runId": "RUN-002",
+      "timestamp": "2026-01-03T14:40:00Z",
+      "qubits": [
+        { "id": "Q1", "fidelity": 0.992, "error": 0.007, "stability": 0.94 },
+        { "id": "Q2", "fidelity": 0.988, "error": 0.010, "stability": 0.90 },
+        { "id": "Q3", "fidelity": 0.994, "error": 0.006, "stability": 0.96 },
+        { "id": "Q4", "fidelity": 0.985, "error": 0.013, "stability": 0.87 },
+        { "id": "Q5", "fidelity": 0.990, "error": 0.009, "stability": 0.92 }
+      ]
+    }
+  ]
+}
