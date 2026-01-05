@@ -2,6 +2,9 @@ import { useState } from "react";
 import data from "../data/experimentData.json";
 import { KpiCard } from "./KpiCard";
 
+import { ErrorBarChart } from "./ErrorBarChart";
+
+
 import { FidelityLineChart } from "./FidelityLineChart";
 
 
@@ -109,6 +112,22 @@ export function DashboardShell() {
 
          <FidelityLineChart data={run.timeseries} />
          </div>
+         <div className="mt-4 rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 p-5">
+        <div className="flex items-baseline justify-between">
+          <div>
+            <div className="text-sm font-semibold text-slate-900">
+              Error rate per qubit
+            </div>
+            <div className="mt-1 text-xs text-slate-500">
+              Run: {run.runId} • distribution across qubits (mock)
+            </div>
+          </div>
+          <div className="text-xs text-slate-500">Metric: error</div>
+        </div>
+
+        <ErrorBarChart data={run.qubits} />
+      </div>
+
       </div>
     </div>
   );
