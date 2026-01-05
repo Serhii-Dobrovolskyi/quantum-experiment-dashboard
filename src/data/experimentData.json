@@ -9,7 +9,15 @@
         { "id": "Q3", "fidelity": 0.993, "error": 0.007, "stability": 0.95 },
         { "id": "Q4", "fidelity": 0.984, "error": 0.014, "stability": 0.86 },
         { "id": "Q5", "fidelity": 0.989, "error": 0.010, "stability": 0.91 }
+      ],
+      "timeseries": [
+         { "t": "10:15", "fidelity": 0.986 },
+         { "t": "10:25", "fidelity": 0.988 },
+         { "t": "10:35", "fidelity": 0.991 },
+         { "t": "10:45", "fidelity": 0.992 },
+         { "t": "10:55", "fidelity": 0.990 }
       ]
+
     },
     {
       "runId": "RUN-002",
@@ -20,6 +28,13 @@
         { "id": "Q3", "fidelity": 0.994, "error": 0.006, "stability": 0.96 },
         { "id": "Q4", "fidelity": 0.985, "error": 0.013, "stability": 0.87 },
         { "id": "Q5", "fidelity": 0.990, "error": 0.009, "stability": 0.92 }
+      ],
+      "timeseries": [
+         { "t": "14:40", "fidelity": 0.987 },
+         { "t": "14:50", "fidelity": 0.989 },
+         { "t": "15:00", "fidelity": 0.991 },
+         { "t": "15:10", "fidelity": 0.993 },
+         { "t": "15:20", "fidelity": 0.992 }
       ]
     }
   ]
