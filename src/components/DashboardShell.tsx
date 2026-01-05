@@ -6,6 +6,7 @@ import { ErrorBarChart } from "./ErrorBarChart";
 
 
 import { FidelityLineChart } from "./FidelityLineChart";
+import { CalibrationHeatmap } from "./CalibrationHeatmap";
 
 
 type Run = (typeof data)["runs"][number];
@@ -127,6 +128,22 @@ export function DashboardShell() {
 
         <ErrorBarChart data={run.qubits} />
       </div>
+      <div className="mt-4 rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 p-5">
+      <div className="flex items-baseline justify-between">
+        <div>
+          <div className="text-sm font-semibold text-slate-900">
+            Calibration quality heatmap
+          </div>
+          <div className="mt-1 text-xs text-slate-500">
+            Simplified matrix view • higher = better (mock)
+          </div>
+        </div>
+        <div className="text-xs text-slate-500">Selected qubit: {qubitId}</div>
+      </div>
+
+      <CalibrationHeatmap data={run.heatmap} selectedRow={qubitId} />
+    </div>
+
 
       </div>
     </div>
