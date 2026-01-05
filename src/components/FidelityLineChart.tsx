@@ -28,7 +28,7 @@ const formatLabel: TooltipProps<number, string>["labelFormatter"] = (label) => {
 
   return (
     <div className="mt-4 h-64">
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height={256}>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="t" />
