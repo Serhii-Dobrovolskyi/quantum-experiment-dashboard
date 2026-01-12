@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# Quantum Experiment Performance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Internal visualization tool prototype for exploring and reporting quantum experiment performance data.
 
-Currently, two official plugins are available:
+This project demonstrates how frontend engineering can support experimental R&D workflows by providing clear, data-driven visualizations of quantum processor metrics. The prototype is intentionally scoped as a lightweight internal tool rather than a full production system.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Project Context
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project was prepared as part of an application for a frontend-focused internship in quantum technology.
 
-## Expanding the ESLint configuration
+It simulates an internal dashboard used by engineers and researchers to inspect experimental results, compare qubit performance across runs, and quickly identify trends or anomalies during iterative experimentation.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The full source code is available in this repository.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Relevance to IQM QPU Performance Group
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project was intentionally scoped as a lightweight internal tool, designed to support experimental QPU performance analysis.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Key design considerations:**
+- **Fast iteration:** optimized for quick inspection of experiment results rather than long-term production analytics
+- **Clear signal visibility:** focuses on exposing performance trends and anomalies without visual noise
+- **Low cognitive load:** prioritizes simple layouts and familiar patterns for rapid interpretation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Why this matters for QPU performance work:**
+- Enables quick comparison across experiment runs and individual qubits
+- Helps identify performance trends and outliers without additional data preprocessing
+- Reflects workflows commonly used in experimental physics and quantum hardware development teams
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Overall, the project demonstrates how frontend engineering can support experimental research by making complex quantum performance data easy to access and interpret.
+
+---
+
+## What the Project Demonstrates
+
+- Visualization of quantum experiment metrics such as **qubit fidelity**, **error rates**, and **stability**
+- Interactive exploration by **experiment run** and **individual qubit**
+- Scientific-style visualizations using **line charts, bar charts, and heatmaps**
+- Clear separation between **data generation (Python)** and **data visualization (frontend)**
+
+The UI prioritizes clarity, low cognitive load, and fast interpretation of experimental signals.
+
+---
+
+## Data & Workflow Overview
+
+The project mirrors a simplified experimental workflow commonly used in quantum hardware and experimental physics environments:
+
+A Python script is used to generate simulated experiment data, reflecting how experimental results are often prepared or preprocessed before visualization.
+
+---
+
+## Tech Stack
+
+**Frontend**
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Recharts
+
+**Data Generation**
+- Python
+- NumPy
+
+---
+
+## How to Run the Project
+
+### Prerequisites
+- Node.js (v18+ recommended)
+- Python 3.x
+
+###  1. Install frontend dependencies
+npm install
+
+###  2. (Optional) Generate mock experiment data
+python -m pip install numpy
+
+python scripts/generate_experiment_data.py
+
+###  3. Start the development server
+npm run dev
+
+Open the application in your browser:
+http://localhost:5173
